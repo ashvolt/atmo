@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atmo — Real-Physics Gravity Lab</title>
+    <meta name="description" content="Interactive, scientifically validated simulation of Earth's gravity, drops and throws: EGM2008 gravity, USSA-1976 atmosphere, real terrain." />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='26' fill='%231b4d89'/><circle cx='32' cy='32' r='26' fill='none' stroke='%2378c6ff' stroke-width='3'/><circle cx='46' cy='18' r='6' fill='%23ffd166'/></svg>" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="view"></canvas>
+      <div id="loading">
+        <div class="loading-card">
+          <div class="loading-title">ATMO</div>
+          <div class="loading-sub">Real-physics gravity laboratory</div>
+          <div class="loading-bar"><div id="loading-fill"></div></div>
+          <div id="loading-text">Loading…</div>
+        </div>
+      </div>
+      <aside id="panel"></aside>
+      <aside id="levpanel"></aside>
+      <div id="topbar"></div>
+      <div id="hud"></div>
+      <div id="hover-info"></div>
+      <div id="summary"></div>
+      <section id="bottom">
+        <div id="timeline"></div>
+        <div id="charts"></div>
+      </section>
+      <div id="modal-root"></div>
+      <div id="toast"></div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+{
+  "name": "atmo",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Real-physics Earth gravity, drop and throw simulator",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "data:egm": "tsx scripts/fetch-egm2008.ts",
+    "data:grid": "tsx scripts/build-gravity-grid.ts",
+    "data:elev": "tsx scripts/build-elevation-grid.ts",
+    "data:places": "python scripts/build_places.py",
+    "data:textures": "python scripts/fetch_textures.py",
+    "data": "npm run data:egm && npm run data:atmosphere && npm run data:grid && npm run data:elev && npm run data:places && npm run data:textures",
+    "data:atmosphere": "python scripts/ussa1976_reference.py"
+  },
+  "devDependencies": {
+    "@types/katex": "^0.16.8",
+    "@types/node": "^22.20.5",
+    "@types/pngjs": "^6.0.5",
+    "@types/three": "^0.170.0",
+    "pngjs": "^7.0.0",
+    "puppeteer-core": "^23.11.1",
+    "tsx": "4.19",
+    "typescript": "5.6",
+    "vite": "5.4",
+    "vitest": "2.1"
+  },
+  "dependencies": {
+    "katex": "^0.16.11",
+    "three": "^0.170.0",
+    "uplot": "^1.6.31"
+  }
+}
